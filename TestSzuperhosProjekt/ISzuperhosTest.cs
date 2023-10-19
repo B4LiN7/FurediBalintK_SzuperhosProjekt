@@ -11,7 +11,7 @@ namespace TestSzuperhosProjekt
         [Fact]
         public void InterfaceMethods()
         {
-            Type type = typeof(ISzuperhos);
+            Type type = typeof(Inter);
             Assert.True(type.IsInterface);
             Assert.True(type.GetMethod("LegyoziE").IsAbstract);
             Assert.True(type.GetMethod("MekkoraAzEreje").IsAbstract);

@@ -5,7 +5,7 @@
         
         public KepregenyTest()
         {
-            Kepregeny.szuperhosok = new List<ISzuperhos>();
+            Kepregeny.szuperhosok = new List<Inter>();
         }
 
 
@@ -19,7 +19,7 @@
         [Fact]
         public void Szuperhosok()
         {
-            Kepregeny.szuperhosok = new List<ISzuperhos>
+            Kepregeny.szuperhosok = new List<Inter>
             {
                 new Vasember(),
                 new Batman()

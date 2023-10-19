@@ -57,7 +57,7 @@ namespace TestSzuperhosProjekt
         [Fact]
         public void ImplementsInterfaces()
         {
-            Assert.True(vasember is ISzuperhos);
+            Assert.True(vasember is Inter);
             Assert.True(vasember is IMilliardos);
             Assert.True(vasember is Bosszuallo);
         }

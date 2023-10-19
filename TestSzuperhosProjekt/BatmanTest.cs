@@ -9,9 +9,9 @@ namespace TestSzuperhosProjekt
 {
     public class BatmanTest
     {
-        private class SzuperhosMock : ISzuperhos
+        private class SzuperhosMock : Inter
         {
-            public bool LegyoziE(ISzuperhos szuperhos)
+            public bool LegyoziE(Inter szuperhos)
             {
                 return false;
             }
@@ -73,7 +73,7 @@ namespace TestSzuperhosProjekt
         [Fact]
         public void ImplementsInterfaces()
         {
-            Assert.True(batman is ISzuperhos);
+            Assert.True(batman is Inter);
             Assert.True(batman is IMilliardos);
             Assert.False(batman is Bosszuallo);
         }

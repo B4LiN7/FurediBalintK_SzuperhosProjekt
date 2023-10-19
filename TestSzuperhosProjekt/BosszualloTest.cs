@@ -108,7 +108,7 @@ namespace TestSzuperhosProjekt
         [Fact]
         public void ImplementsInterfaces()
         {
-            Assert.True(bosszuallo is ISzuperhos);
+            Assert.True(bosszuallo is Inter);
         }
     }
 }
