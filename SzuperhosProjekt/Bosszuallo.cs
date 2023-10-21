@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SzuperhosProjekt
 {
-    public abstract class Bosszuallo : ISzuperhos
+    public abstract class Bosszuallo : Inter
     {
         private double szuperero;
         private bool vanEGyengesege;
@@ -20,14 +20,47 @@ namespace SzuperhosProjekt
         public double Szuperero { get => szuperero; set => szuperero = value; }
         public bool VanEGyengesege { get => vanEGyengesege; set => vanEGyengesege = value; }
 
-        public bool LegyoziE(ISzuperhos szuperhos)
+        public bool LegyoziE(Inter szuperhos)
         {
-            return false;
+            /*
+            Bosszuallo? bosszuallo = szuperhos as Bosszuallo;
+            if (bosszuallo == null) { return false; }
+            */
+
+            if (szuperhos is Bosszuallo bosszuallo && bosszuallo.MekkoraAzEreje() < this.szuperero && bosszuallo.VanEGyengesege)
+            {
+                return true;
+            }
+            else if (szuperhos is Batman batman && batman.MekkoraAzEreje() * 2 <= this.szuperero)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
+
 
         public double MekkoraAzEreje()
         {
             return szuperero;
+        }
+
+        public abstract bool MegmentiAVilagot();
+
+        public override string ToString()
+        {
+            string kimenet = $"Szupererő: {this.szuperero}; ";
+            if (this.vanEGyengesege)
+            {
+                kimenet += "van gyengesége";
+            }
+            else
+            {
+                kimenet += "nincs gyengesége";
+            }
+            return kimenet;
         }
     }
 }

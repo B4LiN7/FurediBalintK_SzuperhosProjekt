@@ -10,7 +10,17 @@ namespace SzuperhosProjekt
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            try
+            {
+                Kepregeny.Szereplok("szuperhos.txt");
+            }
+            catch (Exception)
+            {
+                throw new IOException("Hiba a fájl beolvasásakor!");
+            }
+            
+            Kepregeny.Szuperhosok();
+            Console.ReadKey();
         }
     }
 }

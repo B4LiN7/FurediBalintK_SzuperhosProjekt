@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace SzuperhosProjekt
 {
-    public interface ISzuperhos
+    public interface Inter
     {
-        bool LegyoziE(ISzuperhos szuperhos);
+        bool LegyoziE(Inter szuperhos);
         double MekkoraAzEreje();
     }
     public interface IMilliardos
